@@ -10,10 +10,7 @@ app.use((req, res, next) => {
     console.log(info);
     next();
 });
-app.use((req, res, next) => {
-    bodyParser.urlencoded({extended: false});
-    next();
-});
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
