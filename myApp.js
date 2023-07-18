@@ -56,6 +56,13 @@ app.get("/name", (req, res) => {
     });
 });
 
+app.post("/name", (req, res) => {
+    var string = req.body.first + " " + req.body.last;
+    res.json({
+        name: string,
+    });
+});
+
 
 
 
